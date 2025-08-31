@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Titulo from "./componentes/Titulo";
+import TarjetaDePerfil from "./componentes/TarjetaDePerfil";
+import Contador from "./componentes/Contador";
+import ListaHobbies from "./componentes/ListaHobbies";
 
 function App() {
+  const usuario = {
+    nombre: "Omar Villagrán",
+    profesion: "Estudiante de Analista de Sistemas",
+    edad: 36
+  };
+
+  const hobbies = ["Programar", "Gaming", "Música"];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Titulo />
+      <TarjetaDePerfil usuario={usuario} />
+      <Contador />
+      <ListaHobbies hobbies={hobbies} />
     </div>
   );
 }
